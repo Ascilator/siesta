@@ -12,4 +12,51 @@ $(function () {
     $('.menu').toggleClass('_active');
     $('body').toggleClass('_lock');
   });
+
+  $('.services_slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 1000,
+    arrows: true,
+    prevArrow: $('.slider_prev'),
+    nextArrow: $('.slider_next')
+  });
+
+  $('.services_slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    $('.slider_count span').text(currentSlide + 1);
+  });
+
+  $('.slider_gal_bod').slick({
+    infinite: false,
+    variableWidth: true,
+    slidesToScroll: 1,
+    speed: 1000,
+    arrows: true,
+    prevArrow: $('.slider_gal_prev'),
+    nextArrow: $('.slider_gal_next'),
+    responsive: [
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          variableWidth: false
+        }
+      },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: false
+        }
+      }
+    ]
+  });
+
+  $('.vac_title>.arrow').click(function () {
+    $(this).parent().siblings('.vac_body').slideToggle();
+    $(this).parent().toggleClass('_active');
+  });
 });
