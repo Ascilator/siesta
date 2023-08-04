@@ -27,6 +27,22 @@ $(function () {
     $('.slider_count span').text(currentSlide + 1);
   });
 
+  $('.slider_main_body').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    speed: 1000,
+    arrows: true,
+    prevArrow: $('.slider_main_prev'),
+    nextArrow: $('.slider_main_next')
+  });
+
+  $('.slider_main_body').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    $('.slider_counter').removeClass().addClass('slider_counter');
+    $('.slider_counter').addClass(`_${currentSlide + 1}`);
+  });
+
   $('.slider_gal_bod').slick({
     infinite: false,
     variableWidth: true,
