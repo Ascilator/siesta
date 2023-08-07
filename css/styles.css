@@ -2628,12 +2628,12 @@ main {
     bottom: 20px;
   }
   .first_screen_v2 .slider_main .slider_controls .slider_main_next,
-.first_screen_v2 .slider_main .slider_controls .slider_main_prev {
+  .first_screen_v2 .slider_main .slider_controls .slider_main_prev {
     width: 40px;
     height: 40px;
   }
   .first_screen_v2 .slider_main .slider_controls .slider_main_next img,
-.first_screen_v2 .slider_main .slider_controls .slider_main_prev img {
+  .first_screen_v2 .slider_main .slider_controls .slider_main_prev img {
     width: 100%;
   }
 }
